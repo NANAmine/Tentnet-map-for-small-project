@@ -1,0 +1,75 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="container conbox">
+<image class='pos-image' src='../../image/tuijian.png' style='width:20px;height:25px;display:{{display}}'  ></image>
+  <!-- 地址电话 -->
+  <view class='list'>
+      <view class='one'>
+              <view class='right'>
+                  <view class='yin t'>{{point.title}}</view>
+              </view>
+              <!-- <image src='image/tuijian.png'></image> -->
+          </view>
+          
+      <view class='one' bindtap="openmap" >
+          <view class='right'>
+              <view class='yin'>地址：{{point.address}}</view>
+          </view>
+      </view>
+      <view class='one'>
+      <view class='right'><span>距离: </span>
+             <view class='yin' style='color:red;font-size:20px'> {{point._distance}}<span class="danwei" >m</span></view>
+      </view>
+          </view>
+      <view class='one'>
+              <view class='right'>时间：步行约
+                  <view class='yin my-time' style='color:red;font-size:20px'>{{time}}<span class="danwei">分钟</span></view>
+              </view>
+          </view>
+           <view class='one'>
+              <view class='right'>卫生：
+                  <view class='yin' style='color:red;font-size:20px'>
+                  <image class="star-style" src="../../image/star1.png"></image>
+                  <image class="star-style" src="../../image/star1.png"></image>
+                  <image class="star-style" src="../../image/star1.png"></image>
+                  <image class="star-style"  src="../../image/star1.png"></image>
+                  <image class="star-style"  src="../../image/star0.png"></image>
+                  </view>
+                  <!-- <view class='td weui-cell__ft' style='width:20%;'>
+        <navigator url='../detail/detail?id={{item.id}}' class="weui-cell__bd">
+<image src='../../image/daohang2.png' style='width:30px;height:30px；'></image></navigator>
+        </view> -->
+              </view>
+          </view>
+           <image  class="open-map-icon" src='../../image/daohang2.png' style='width:40px;height:40px' bindtap="openmap"></image>
+  </view>
+  <view class="table">
+       <view class='tr'>
+       <view class='td' style='width:100%'>
+          <view class="tr" style='background-color: 	#74d584;color:#fff;'>
+            <view class="th" >性别</view>
+            <view class="th" >厕所空闲</view>
+            <view class="th" >排队人数</view>
+            <view class="th">等待时间</view>
+          </view>
+          <view class="tr">
+            <view class="td" style='text-align:center'> 女</view>
+            <view class="td" style='text-align:center'>{{lists.Wnum}}/10</view>
+            <view class="td" style='text-align:center'>-</view>
+            <view class="td" style='text-align:center'>-</view>
+          </view>
+          <view class="tr">
+            <view class="td" style='text-align:center'> 男</view>
+            <view class="td" style='text-align:center'>{{lists.Mnum}}/10</view>
+            <view class="td" style='text-align:center'>-</view>
+            <view class="td" style='text-align:center'>-</view>
+          </view>
+        </view>
+        </view>
+
+        </view>
+<!--       
+  <view class='btn'  bindtap="openmap">
+      地图导航
+  </view> -->
+</view>
